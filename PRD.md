@@ -36,6 +36,16 @@ The following are the base features included in this template.
 - Users can update items
 - User can delete items
 
+## Features/Services
+
+Here are a list of features that we look to have available.
+
+- E-Commerce
+- Stripe payments
+- Emailer/Subscription notification system
+- Community Center/Forum
+- Blog
+
 ## Route Tables
 
 For backend Applications you'll want to detail the different routes and types of your request your server can receive. There are three main things to define.
