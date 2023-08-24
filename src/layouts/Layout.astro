@@ -1,0 +1,37 @@
+---
+export interface Props {
+	title: string;
+}
+const { title } = Astro.props as Props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<script>
+			// VERCEL ANALYTICS
+			window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+
+			// WEB_VITALS
+			import { webVitals } from "../lib/vitals.js"
+
+			let analyticsId = import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID;
+
+			if (analyticsId) {
+				webVitals({
+					path: location.pathname,
+					params: location.search,
+					analyticsId,
+				});
+			}
+		</script>
+		<script defer src="/_vercel/insights/script.js"></script>
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
+</html>
