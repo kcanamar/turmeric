@@ -4,10 +4,10 @@ Once you all have `bun` installed you can run the command
 `bunx create-astro@latest turmeric --template kcanamar/turmeric`
 
 Then you will follow the CLI prompts as follows 
-`Install Dependencies [Y]`
-`Do you plan to write TypeScript [Y]`
-`How strict should TypeScript be [Strict]`
-`Initialize in a new git repository [Y]`
+1. `Install Dependencies [Y]`
+1. `Do you plan to write TypeScript [Y]`
+1. `How strict should TypeScript be [Strict]`
+1. `Initialize in a new git repository [Y]`
 
 # Astro Starter Kit: Minimal
 
