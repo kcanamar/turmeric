@@ -1,0 +1,12 @@
+---
+import {getUser} from '../utils/auth';
+const user = await getUser(Astro.request);
+
+import Layout from '../layouts/Layout.astro';
+import LoginOrRegister from "../components/LoginOrRegister"
+---
+
+
+<Layout title="Login" user={user}>
+    <LoginOrRegister client:load/>
+</Layout>

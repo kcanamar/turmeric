@@ -1,8 +1,19 @@
 ---
+import { SEO } from "astro-seo";
+import LoginStatus from "../components/LoginStatus.astro"
+
 export interface Props {
 	title: string;
+	user: any;
+	isLoggedIn: boolean;
 }
-const { title } = Astro.props as Props;
+
+const { user, title } = Astro.props;
+const isLoggedIn = !(user == null);
+
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/700.css'
 ---
 
 <html lang="en">
@@ -30,8 +41,37 @@ const { title } = Astro.props as Props;
 		</script>
 		<script defer src="/_vercel/insights/script.js"></script>
 		<title>{title}</title>
+
+		<!-- <SEO
+			title=""
+			description=""
+			twitter={{
+				card:"summary",
+				site:"<username>"
+			}}
+			extend={{
+				meta: [
+					{
+						name: "twitter:image",
+						content: "image hosted from public directory",
+					},
+						{ name: "twitter:title", content: "" },
+						{ name: "twitter:description", content: "" },
+					],
+			}}
+		/> -->
+
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="container mx-auto px-4 font-roboto">
+			<div class="">
+				<LoginStatus isLoggedIn={isLoggedIn}></LoginStatus>
+				<div class="pt-8 max-w-xl">
+					<article class="prose-lg lg:prose-xl">
+						<slot/>
+					</article>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
