@@ -2,7 +2,7 @@
 
 <!-- Todo - Team defines how to work, and set expectations.  -->
 
-### Write something nice here!
+### Write something nice here! Something nice.
 
 >First off, thank you for considering contributing to Active Admin. It's people like you that make Active Admin such a great tool.
 
