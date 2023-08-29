@@ -1,0 +1,12 @@
+---
+import { getUser } from "../utils/auth";
+import Layout from "../layouts/Layout.astro";
+
+let user = await getUser(Astro.request);
+---
+
+<Layout title="Turmeric" user={user}>
+	<body>
+		<a href="/login">Care to Login? Click Here</a>
+	</body>
+</Layout>
