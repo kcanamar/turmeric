@@ -7,3 +7,8 @@ interface ImportMetaEnv {
 interface ImportMeta {
 	readonly env: ImportMetaEnv;
 }
+
+// Builder.io API Key
+interface ImportMetaEnv {
+	readonly BUILDER_API_PUBLIC_KEY: string;
+  }
