@@ -3,6 +3,10 @@ export interface Props {
 	title: string;
 }
 const { title } = Astro.props as Props;
+
+// Builder.io API key and model
+const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
+const builderModel = import.meta.env.BUILDER_TURMERIC_MODEL;
 ---
 
 <html lang="en">
@@ -32,6 +36,12 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-	</body>
+		<header>This is your header</header>
+	
+		<builder-component model={builderModel} api-key={builderAPIpublicKey}
+		></builder-component>
+		<script async src="https://cdn.builder.io/js/webcomponents"></script>
+	
+		<footer>This is your footer</footer>
+	  </body>
 </html>
